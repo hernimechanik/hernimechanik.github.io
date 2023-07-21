@@ -100,6 +100,14 @@
 			</div>
 		</div>
 	</nav> -->
+
+	<!-- <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+		<i class="fas fa-arrow-up"></i>
+	</button> -->
 	
 	<div id="colorlib-page">
 		<header>
@@ -108,7 +116,7 @@
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
 							<!-- <a class="colorlib-logo" href="index.html"><span>Herní</span><span>Mechanik</span></a> -->
-              <a href="index.html"><img src="images/logo_square.png" style="max-width: 100px;" id="podcast-logo"></a>
+              				<!-- <a href="index.html"><img src="images/logo_square.png" style="max-width: 100px;" id="podcast-logo"></a> -->
 						</div>
 						<!-- <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a> -->
 					</div>
@@ -118,22 +126,19 @@
 		<div id="colorlib-about">
 			<div class="container">
 				<div class="row text-center">
-					<h2 class="bold">Podcast</h2>
+					<h2 class="bold" style="z-index: 10;">Podcast</h2>
 				</div>
 				<div class="row">
-					<div class="col-md-5 animate-box">
-						<div class="owl-carousel3">
+					<div class="col-md-5">
+						<div>
 							<div class="item">
-								<img class="img-responsive about-img" src="images/vlad1.PNG" alt="html5 bootstrap template by colorlib.com">
-							</div>
-							<div class="item">
-								<img class="img-responsive about-img" src="images/vlad2.PNG" alt="html5 bootstrap template by colorlib.com">
+								<img class="img-responsive about-img" src="images/logo_square.png" alt="html5 bootstrap template by colorlib.com">
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-md-push-1 animate-box">
 						<div class="about-desc">
-							<div class="owl-carousel3">
+							<div class="owl-carousel3" data-bs-touch="false" style="z-index: 20;">
 								<div class="item">
 									<h2><span>Herní</span><span>Mechanik</span></h2>
 								</div>
@@ -146,21 +151,23 @@
 									<h2 class="heading">PODCAST</h2>
 								</div>
 								<p>
-                  <ul style="list-style-type: circle;">
-                    <li>Proč jsou některé hry zábavné a jiné stojí za starou bačkoru?</li>
-                    <li>Jak přemýšlí herní vývojáři?</li>
-                    <li>A jak by někteří přemýšlet měli?</li>
-                  </ul>
-                  Ukážu vám proč některé věci ve hrách prostě fungují a jak vlastně hry vznikají. Nemusíte při tom mít strach ze zbytečných technických detailů a složitostí.
-                </p>
+								<ul style="list-style-type: circle;">
+									<li>Proč jsou některé hry zábavné a jiné stojí za starou bačkoru?</li>
+									<li>Jak přemýšlí herní vývojáři?</li>
+									<li>A jak by někteří přemýšlet měli?</li>
+								</ul>
+								Ukážu vám proč některé věci ve hrách prostě fungují a jak vlastně hry vznikají. Nemusíte při tom mít strach ze zbytečných technických detailů a složitostí.
+								</p>
 								<p class="colorlib-social-icons">
-                  <a href="https://www.youtube.com/@hernimechanik" target="_blank"><i class="icon-youtube"></i></a>
+									<a href="https://www.youtube.com/@hernimechanik" target="_blank"><i class="icon-youtube"></i></a>
 									<a href="https://www.facebook.com/hernimechanik/" target="_blank"><i class="icon-facebook"></i></a>
-                  <a href="https://www.tiktok.com/@hernimechanik" target="_blank"><img src="images/tiktok_dark.png" style="width: 27px; transform: translateY(-6px);" alt=""></a>
-                  <a href="https://www.instagram.com/hernimechanik/" target="_blank"><i class="icon-instagram"></i></a>
+									<a href="https://www.tiktok.com/@hernimechanik" target="_blank"><img src="images/tiktok_dark.png" style="width: 27px; transform: translateY(-6px);" alt=""></a>
+									<a href="https://www.instagram.com/hernimechanik/" target="_blank"><i class="icon-instagram"></i></a>
 									<a href="https://open.spotify.com/show/0yezvYpq5sHeX96HNo0IOh" target="_blank"><i class="icon-spotify"></i></a>
 								</p>
-								<p><a href="https://discord.com/invite/jUwpsTDWbY" class="btn btn-primary btn-outline" target="_blank">Přijď na discord!</a></p>
+								<p>
+									<a href="https://discord.com/invite/jUwpsTDWbY" class="btn btn-primary btn-outline" target="_blank">Přijď na discord!</a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -517,6 +524,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</footer>
 	
 	</div>
+
+	<script>
+		//Get the button
+		let mybutton = document.getElementById("btn-back-to-top");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+			}
+			// When the user clicks on the button, scroll to the top of the document
+			mybutton.addEventListener("click", backToTop);
+
+			function backToTop() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
